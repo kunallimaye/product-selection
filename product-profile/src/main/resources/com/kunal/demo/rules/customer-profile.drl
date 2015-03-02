@@ -1,2 +1,31 @@
 package com.kunal.demo.rules;
+dialect "java"
 
+import java.util.Date;
+import java.util.Calendar;
+import com.kunal.demo.model.Customer;
+
+function boolean checkIfAdult(Date dob){
+	Calendar calendar = Calendar.getInstance();
+	calendar.add(Calendar.YEAR, -18);
+	Date minDateForAnAdult = calendar.getTime();
+	return dob.before(minDateForAnAdult);
+}
+
+rule "create profile for the customer"
+when
+	// When a customer exists
+	$c : Customer()
+then
+	/* Profile the customer. */
+	// Check if the customer is adult
+	$c.setAdult (checkIfAdult($c.getDob()));
+	insert ($c);
+end
+
+rule "Is an adult"
+when
+	$c : Customer(adult == true);
+then
+	System.out.println($c.getName() + " is an ADULT");
+end
