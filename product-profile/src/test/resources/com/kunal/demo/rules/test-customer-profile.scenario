@@ -1,0 +1,12 @@
+<scenario>
+  <name>test-customer-profile</name>
+  <maxRuleFirings>100000</maxRuleFirings>
+  <globals/>
+  <fixtures/>
+  <rules/>
+  <inclusive>false</inclusive>
+  <packageName>com.kunal.demo.rules</packageName>
+  <imports>
+    <imports/>
+  </imports>
+</scenario>
