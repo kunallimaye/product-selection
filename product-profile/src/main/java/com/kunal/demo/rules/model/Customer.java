@@ -14,7 +14,7 @@ public class Customer implements java.io.Serializable
    @org.kie.api.definition.type.Label(value = "Date of birth")
    private java.util.Date dob;
    @org.kie.api.definition.type.Label(value = "Adult customer?")
-   private boolean isAdult;
+   private boolean adult;
 
    public Customer()
    {
@@ -40,21 +40,21 @@ public class Customer implements java.io.Serializable
       this.dob = dob;
    }
 
-   public boolean isIsAdult()
+   public boolean isAdult()
    {
-      return this.isAdult;
+      return this.adult;
    }
 
-   public void setIsAdult(boolean isAdult)
+   public void setAdult(boolean adult)
    {
-      this.isAdult = isAdult;
+      this.adult = adult;
    }
 
-   public Customer(java.lang.String name, java.util.Date dob, boolean isAdult)
+   public Customer(java.lang.String name, java.util.Date dob, boolean adult)
    {
       this.name = name;
       this.dob = dob;
-      this.isAdult = isAdult;
+      this.adult = adult;
    }
 
 }
