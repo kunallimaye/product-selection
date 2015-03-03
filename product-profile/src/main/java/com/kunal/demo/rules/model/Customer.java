@@ -57,4 +57,9 @@ public class Customer implements java.io.Serializable
       this.adult = adult;
    }
 
+	public String toString(){
+		return	"Name: " + this.name +
+			"\n\tdob: " + this.dob +
+			"\n\tadult?: " + this.adult;
+	}
 }
