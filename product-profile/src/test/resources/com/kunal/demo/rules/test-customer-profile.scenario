@@ -3,8 +3,43 @@
   <maxRuleFirings>100000</maxRuleFirings>
   <globals/>
   <fixtures>
-    <execution-trace/>
+    <fact-data>
+      <type>Customer</type>
+      <fieldData>
+        <field-data>
+          <name>dob</name>
+          <value>01-Jan-1980</value>
+          <nature>1</nature>
+        </field-data>
+        <field-data>
+          <name>name</name>
+          <value>Kunal Limaye</value>
+          <nature>4</nature>
+        </field-data>
+      </fieldData>
+      <name>adult</name>
+      <isModify>false</isModify>
+    </fact-data>
+    <execution-trace>
+      <executionTimeResult>5</executionTimeResult>
+      <numberOfRulesFired>1</numberOfRulesFired>
+    </execution-trace>
+    <expect-rule>
+      <ruleName>create profile for the customer</ruleName>
+      <explanation>Rule [create profile for the customer] was activated 1 times.</explanation>
+      <expectedFire>true</expectedFire>
+      <successResult>true</successResult>
+      <actualResult>1</actualResult>
+    </expect-rule>
+    <expect-rule>
+      <ruleName>Is an adult</ruleName>
+      <explanation>Rule [Is an adult] was not activated. Expected it to be activated.</explanation>
+      <expectedFire>true</expectedFire>
+      <successResult>false</successResult>
+      <actualResult>0</actualResult>
+    </expect-rule>
   </fixtures>
+  <lastRunResult>2015-03-03 00:15:51.943 UTC</lastRunResult>
   <rules/>
   <inclusive>false</inclusive>
   <packageName>com.kunal.demo.rules</packageName>
