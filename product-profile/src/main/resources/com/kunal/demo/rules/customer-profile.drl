@@ -22,6 +22,7 @@ then
 	/* Profile the customer. */
 	// Check if the customer is adult
 	$c.setAdult (checkIfAdult($c.getDob()));
+	System.out.println($c);
 	insert ($c);
 end
 
