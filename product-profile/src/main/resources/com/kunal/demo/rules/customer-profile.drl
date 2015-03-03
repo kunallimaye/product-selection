@@ -27,7 +27,7 @@ end
 
 rule "Is an adult"
 when
-	$c : Customer(adult == true);
+	$c : Customer(adult == true)
 then
 	System.out.println($c.getName() + " is an ADULT");
 end
