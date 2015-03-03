@@ -10,6 +10,7 @@ function boolean checkIfAdult(Date dob){
 	calendar.add(Calendar.YEAR, -18);
 	Date minDateForAnAdult = calendar.getTime();
 	System.out.println("Min date for the customer to be an adult: " + minDateForAnAdult);
+	System.out.println("Is the customer an adult: " + dob.before(minDateForAnAdult));
 	return dob.before(minDateForAnAdult);
 }
 
