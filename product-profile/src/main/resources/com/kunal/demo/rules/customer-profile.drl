@@ -23,7 +23,7 @@ then
 	// Check if the customer is adult
 	$c.setAdult (checkIfAdult($c.getDob()));
 	System.out.println($c);
-	insert ($c);
+	//insert ($c);
 end
 
 rule "Is an adult"
