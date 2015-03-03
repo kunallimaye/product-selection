@@ -27,6 +27,7 @@ then
 end
 
 rule "Is an adult"
+salience 10
 when
 	$c : Customer(adult == true)
 then
