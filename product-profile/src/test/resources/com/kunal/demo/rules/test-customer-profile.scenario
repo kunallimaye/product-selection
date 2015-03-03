@@ -21,7 +21,7 @@
       <isModify>false</isModify>
     </fact-data>
     <execution-trace>
-      <executionTimeResult>5</executionTimeResult>
+      <executionTimeResult>4</executionTimeResult>
       <numberOfRulesFired>1</numberOfRulesFired>
     </execution-trace>
     <expect-rule>
@@ -39,7 +39,7 @@
       <actualResult>0</actualResult>
     </expect-rule>
   </fixtures>
-  <lastRunResult>2015-03-03 00:15:51.943 UTC</lastRunResult>
+  <lastRunResult>2015-03-03 00:28:40.475 UTC</lastRunResult>
   <rules/>
   <inclusive>false</inclusive>
   <packageName>com.kunal.demo.rules</packageName>
