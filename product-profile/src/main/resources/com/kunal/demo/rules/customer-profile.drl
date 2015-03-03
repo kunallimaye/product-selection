@@ -3,12 +3,13 @@ dialect "java"
 
 import java.util.Date;
 import java.util.Calendar;
-import com.kunal.demo.model.Customer;
+import com.kunal.demo.rules.model.Customer;
 
 function boolean checkIfAdult(Date dob){
 	Calendar calendar = Calendar.getInstance();
 	calendar.add(Calendar.YEAR, -18);
 	Date minDateForAnAdult = calendar.getTime();
+	System.out.println("Min date for the customer to be an adult: " + minDateForAnAdult);
 	return dob.before(minDateForAnAdult);
 }
 
