@@ -4,6 +4,7 @@ dialect "java"
 import java.util.Date;
 import java.util.Calendar;
 import com.kunal.demo.rules.model.Customer;
+import com.kunal.demo.rules.model.AffordabilityConcernType;
 
 function boolean checkIfAdult(Date dob){
 	return checkIfOlderThan(dob, 18);
