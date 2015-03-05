@@ -6,28 +6,61 @@ import java.util.Calendar;
 import com.kunal.demo.rules.model.Customer;
 
 function boolean checkIfAdult(Date dob){
+	return checkIfOlderThan(dob, 18);
+}
+
+function boolean checkIfYoungerThan(Date dob, int age){
 	Calendar calendar = Calendar.getInstance();
-	calendar.add(Calendar.YEAR, -18);
+	calendar.add(Calendar.YEAR, -age);
 	Date minDateForAnAdult = calendar.getTime();
-	System.out.println("Min date for the customer to be an adult: " + minDateForAnAdult);
-	System.out.println("Is the customer an adult: " + dob.before(minDateForAnAdult));
+	System.out.println("Is the customer older than [" + dob + "]? " + dob.after(minDateForAnAdult));
+	return dob.after(minDateForAnAdult);
+}
+
+function boolean checkIfOlderThan(Date dob, int age){
+	Calendar calendar = Calendar.getInstance();
+	calendar.add(Calendar.YEAR, -age);
+	Date minDateForAnAdult = calendar.getTime();
+	System.out.println("Is the customer older than [" + dob + "]? " + dob.before(minDateForAnAdult));
 	return dob.before(minDateForAnAdult);
 }
 
+function int getAge(Date dob){
+	Calendar now = Calendar.getInstance();
+	Calendar _dob = Calendar.getInstance();
+	_dob.setTime(dob);
+	//TODO: logic to calculate age needs to improve to include month and day as well
+	return ( now.get(Calendar.YEAR) - _dob.get(Calendar.YEAR) );
+}
+
+declare CustomerProfile
+	customer				:	Customer
+	age						:	int
+	affordabilityConcern	:	String
+end
+
 rule "create profile for the customer"
+no-loop
 when
 	// When a customer exists
 	$c : Customer()
 then
-	/* Profile the customer. */
+	CustomerProfile customerProfile = new CustomerProfile($c, getAge($c.getDob()), "High");
 	// Check if the customer is adult
-	$c.setAdult (checkIfAdult($c.getDob()));
+	// $c.setAdult (checkIfAdult($c.getDob()));
 	System.out.println($c);
-	//insert ($c);
+	update ($c);
+	insert (customerProfile);
 end
 
-rule "Is an adult"
-salience 10
+rule "Is the customer an adult?"
+when
+	$customerProfile : CustomerProfile( age > 18)
+then
+	System.out.println($customerProfile.getCustomer().getName() + " is an adult");
+end
+
+rule "Is an adult?"
 when
 	$c : Customer(adult == true)
 then
