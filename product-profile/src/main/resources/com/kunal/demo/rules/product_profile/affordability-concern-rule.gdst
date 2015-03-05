@@ -32,40 +32,9 @@
           <operator>&gt;=</operator>
           <parameters/>
         </condition-column52>
-        <condition-column52>
-          <typedDefaultValue>
-            <valueNumeric class="int">30</valueNumeric>
-            <valueString></valueString>
-            <dataType>NUMERIC_INTEGER</dataType>
-            <isOtherwise>false</isOtherwise>
-          </typedDefaultValue>
-          <hideColumn>false</hideColumn>
-          <width>-1</width>
-          <header>&lt;= 30</header>
-          <constraintValueType>1</constraintValueType>
-          <factField>age</factField>
-          <fieldType>Integer</fieldType>
-          <operator>&lt;=</operator>
-          <parameters/>
-        </condition-column52>
-        <condition-column52>
-          <typedDefaultValue>
-            <valueNumeric class="int">50</valueNumeric>
-            <valueString></valueString>
-            <dataType>NUMERIC_INTEGER</dataType>
-            <isOtherwise>false</isOtherwise>
-          </typedDefaultValue>
-          <hideColumn>false</hideColumn>
-          <width>-1</width>
-          <header>&gt; 50</header>
-          <constraintValueType>1</constraintValueType>
-          <factField>age</factField>
-          <fieldType>Integer</fieldType>
-          <operator>&gt;</operator>
-          <parameters/>
-        </condition-column52>
       </conditions>
       <window>
+        <operator></operator>
         <parameters/>
       </window>
     </Pattern52>
@@ -150,5 +119,40 @@
   </imports>
   <packageName>com.kunal.demo.rules.product_profile</packageName>
   <tableFormat>EXTENDED_ENTRY</tableFormat>
-  <data/>
+  <data>
+    <list>
+      <value>
+        <valueNumeric class="int">1</valueNumeric>
+        <valueString></valueString>
+        <dataType>NUMERIC_INTEGER</dataType>
+        <isOtherwise>false</isOtherwise>
+      </value>
+      <value>
+        <valueString></valueString>
+        <dataType>STRING</dataType>
+        <isOtherwise>false</isOtherwise>
+      </value>
+      <value>
+        <valueNumeric class="int">18</valueNumeric>
+        <valueString></valueString>
+        <dataType>NUMERIC_INTEGER</dataType>
+        <isOtherwise>false</isOtherwise>
+      </value>
+      <value>
+        <valueString>AffordabilityConcernType.HIGH</valueString>
+        <dataType>STRING</dataType>
+        <isOtherwise>false</isOtherwise>
+      </value>
+      <value>
+        <valueString></valueString>
+        <dataType>STRING</dataType>
+        <isOtherwise>false</isOtherwise>
+      </value>
+      <value>
+        <valueString></valueString>
+        <dataType>STRING</dataType>
+        <isOtherwise>false</isOtherwise>
+      </value>
+    </list>
+  </data>
 </decision-table52>
