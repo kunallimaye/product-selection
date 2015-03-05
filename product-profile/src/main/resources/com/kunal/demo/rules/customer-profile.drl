@@ -35,8 +35,9 @@ function int getAge(Date dob){
 
 declare CustomerProfile
 	customer				:	Customer
-	age						:	int
+	age					:	int
 	affordabilityConcern	:	String
+	coverAmount			:	long
 end
 
 rule "create profile for the customer"
