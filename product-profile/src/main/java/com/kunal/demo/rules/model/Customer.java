@@ -19,6 +19,12 @@ public class Customer implements java.io.Serializable
    @org.kie.api.definition.type.Label(value = "Disposable income")
    private long disposableIncome;
 
+   @org.kie.api.definition.type.Label(value = "Type of occupation")
+   private java.lang.String occupationType;
+
+   @org.kie.api.definition.type.Label(value = "Status of employment")
+   private java.lang.String employmentStatus;
+
    public Customer()
    {
    }
@@ -68,12 +74,35 @@ public class Customer implements java.io.Serializable
       this.disposableIncome = disposableIncome;
    }
 
+   public java.lang.String getOccupationType()
+   {
+      return this.occupationType;
+   }
+
+   public void setOccupationType(java.lang.String occupationType)
+   {
+      this.occupationType = occupationType;
+   }
+
+   public java.lang.String getEmploymentStatus()
+   {
+      return this.employmentStatus;
+   }
+
+   public void setEmploymentStatus(java.lang.String employmentStatus)
+   {
+      this.employmentStatus = employmentStatus;
+   }
+
    public Customer(java.lang.String name, java.util.Date dob, long grossIncome,
-         long disposableIncome)
+         long disposableIncome, java.lang.String occupationType,
+         java.lang.String employmentStatus)
    {
       this.name = name;
       this.dob = dob;
       this.grossIncome = grossIncome;
       this.disposableIncome = disposableIncome;
+      this.occupationType = occupationType;
+      this.employmentStatus = employmentStatus;
    }
 }
