@@ -5,6 +5,7 @@ import java.util.Date;
 import java.util.Calendar;
 import com.kunal.demo.rules.model.Customer;
 import com.kunal.demo.rules.model.AffordabilityConcernType;
+import com.kunal.demo.rules.model.EmploymentDurationType;
 
 function boolean checkIfAdult(Date dob){
 	return checkIfOlderThan(dob, 18);
@@ -39,7 +40,7 @@ declare CustomerProfile
 	age					:	int
 	affordabilityConcern	:	AffordabilityConcernType
 	coverAmount			:	long
-	employmentDuration	:	String
+	employmentDuration	:	EmploymentDurationType
 end
 
 rule "create profile for the customer"
@@ -48,7 +49,9 @@ when
 	// When a customer exists
 	$c : Customer()
 then
-	CustomerProfile customerProfile = new CustomerProfile($c, getAge($c.getDob()), "High");
+	CustomerProfile customerProfile = new CustomerProfile();
+	customerProfile.setCustomer($c);
+	customerProfile.setAge(getAge($c.getDob()));
 	System.out.println($c);
 	update ($c);
 	insert (customerProfile);
