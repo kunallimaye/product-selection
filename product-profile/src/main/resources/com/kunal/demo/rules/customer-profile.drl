@@ -46,8 +46,6 @@ when
 	$c : Customer()
 then
 	CustomerProfile customerProfile = new CustomerProfile($c, getAge($c.getDob()), "High");
-	// Check if the customer is adult
-	// $c.setAdult (checkIfAdult($c.getDob()));
 	System.out.println($c);
 	update ($c);
 	insert (customerProfile);
