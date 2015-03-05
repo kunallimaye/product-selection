@@ -13,8 +13,11 @@ public class Customer implements java.io.Serializable
    private java.lang.String name;
    @org.kie.api.definition.type.Label("Date of birth")
    private java.util.Date dob;
-   @org.kie.api.definition.type.Label(value = "Total income")
+   @org.kie.api.definition.type.Label("Total income")
    private long grossIncome;
+
+   @org.kie.api.definition.type.Label(value = "Disposable income")
+   private long disposableIncome;
 
    public Customer()
    {
@@ -55,10 +58,22 @@ public class Customer implements java.io.Serializable
       this.grossIncome = grossIncome;
    }
 
-   public Customer(java.lang.String name, java.util.Date dob, long grossIncome)
+   public long getDisposableIncome()
+   {
+      return this.disposableIncome;
+   }
+
+   public void setDisposableIncome(long disposableIncome)
+   {
+      this.disposableIncome = disposableIncome;
+   }
+
+   public Customer(java.lang.String name, java.util.Date dob, long grossIncome,
+         long disposableIncome)
    {
       this.name = name;
       this.dob = dob;
       this.grossIncome = grossIncome;
+      this.disposableIncome = disposableIncome;
    }
 }
