@@ -34,7 +34,7 @@ function int getAge(Date dob){
 	//TODO: logic to calculate age needs to improve to include month and day as well
 	return ( now.get(Calendar.YEAR) - _dob.get(Calendar.YEAR) );
 }
-
+/*
 declare CustomerProfile
 	customer				:	Customer
 	age					:	int
@@ -42,7 +42,7 @@ declare CustomerProfile
 	coverAmount			:	long
 	employmentDuration	:	EmploymentDurationType
 end
-/*
+
 rule "create profile for the customer"
 no-loop
 when
