@@ -27,7 +27,6 @@
           <header>Age</header>
           <constraintValueType>3</constraintValueType>
           <factField>age</factField>
-          <fieldType>Integer</fieldType>
           <operator>&gt;=</operator>
           <parameters/>
         </condition-column52>
@@ -113,7 +112,19 @@
   <imports>
     <imports>
       <org.drools.workbench.models.datamodel.imports.Import>
-        <type>com.kunal.demo.rules.CustomerProfile</type>
+        <type>com.kunal.demo.rules.model.Customer</type>
+      </org.drools.workbench.models.datamodel.imports.Import>
+      <org.drools.workbench.models.datamodel.imports.Import>
+        <type>com.kunal.demo.rules.model.EmploymentDurationType</type>
+      </org.drools.workbench.models.datamodel.imports.Import>
+      <org.drools.workbench.models.datamodel.imports.Import>
+        <type>com.kunal.demo.rules.model.OccupationType</type>
+      </org.drools.workbench.models.datamodel.imports.Import>
+      <org.drools.workbench.models.datamodel.imports.Import>
+        <type>com.kunal.demo.rules.model.AffordabilityConcernType</type>
+      </org.drools.workbench.models.datamodel.imports.Import>
+      <org.drools.workbench.models.datamodel.imports.Import>
+        <type>com.kunal.demo.rules.model.CustomerProfile</type>
       </org.drools.workbench.models.datamodel.imports.Import>
     </imports>
   </imports>
@@ -133,7 +144,7 @@
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
-        <valueString>18</valueString>
+        <valueString>&gt;=18</valueString>
         <dataType>STRING</dataType>
         <isOtherwise>false</isOtherwise>
       </value>
