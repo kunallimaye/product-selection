@@ -1,9 +1,15 @@
 package com.kunal.demo.rules;
 
 import java.lang.Number;
+import com.kunal.demo.rules.model.Customer;
+import com.kunal.demo.rules.model.CustomerProfile;
 
 rule "generate-customer-profile"
 	dialect "mvel"
 	when
+		c : Customer( )
 	then
+		CustomerProfile profile = new CustomerProfile();
+		profile.setCustomer( c );
+		insertLogical( profile );
 end
