@@ -1,7 +1,5 @@
 package com.kunal.demo.rules;
 
-package org.jboss.quickstarts.brms;
-
 import java.util.Calendar;
 import java.util.Date;
 
