@@ -6,7 +6,6 @@ package com.kunal.demo.rules;
 import java.util.Calendar;
 import java.util.Date;
 
-import org.junit.Assert;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import org.kie.api.KieServices;
