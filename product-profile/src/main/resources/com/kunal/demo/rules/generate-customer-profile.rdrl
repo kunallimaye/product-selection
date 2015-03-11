@@ -1,0 +1,9 @@
+package com.kunal.demo.rules;
+
+import java.lang.Number;
+
+rule "generate-customer-profile"
+	dialect "mvel"
+	when
+	then
+end
