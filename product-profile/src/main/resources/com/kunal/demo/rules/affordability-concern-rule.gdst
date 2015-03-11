@@ -130,7 +130,7 @@
       </org.drools.workbench.models.datamodel.imports.Import>
     </imports>
   </imports>
-  <packageName>com.kunal.demo.rules.product_profile</packageName>
+  <packageName>com.kunal.demo.rules</packageName>
   <tableFormat>EXTENDED_ENTRY</tableFormat>
   <data>
     <list>

@@ -53,8 +53,8 @@ then
 	CustomerProfile customerProfile = new CustomerProfile();
 	customerProfile.setCustomer($c);
 	customerProfile.setAge(getAge($c.getDob()));
-	System.out.println($c);
-	update ($c);
+	//System.out.println($c);
+	//update ($c);
 	insert (customerProfile);
 end
 
@@ -62,5 +62,6 @@ rule "Is the customer an adult?"
 when
 	$customerProfile : CustomerProfile( age > 18)
 then
-	System.out.println($customerProfile.getCustomer().getName() + " is an adult");
+	System.out.println("\n\t" + $customerProfile.getCustomer().getName() + " is an adult");
+	System.out.println("\n\t" + $customerProfile.toString());
 end
