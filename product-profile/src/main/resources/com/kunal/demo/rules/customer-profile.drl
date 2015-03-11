@@ -42,7 +42,7 @@ declare CustomerProfile
 	coverAmount			:	long
 	employmentDuration	:	EmploymentDurationType
 end
-
+/*
 rule "create profile for the customer"
 no-loop
 when
@@ -62,4 +62,4 @@ when
 	$customerProfile : CustomerProfile( age > 18)
 then
 	System.out.println($customerProfile.getCustomer().getName() + " is an adult");
-end
+en*/
