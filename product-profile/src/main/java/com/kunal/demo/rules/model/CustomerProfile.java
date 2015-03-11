@@ -13,9 +13,11 @@ public class CustomerProfile
    private Customer customer;
    @org.kie.api.definition.type.Label("Age")
    private int age;
+   @org.kie.api.definition.type.Label("Affordability of the customer")
    private AffordabilityConcernType affordabilityConcern;
    @org.kie.api.definition.type.Label("Insurance cover amount")
    private long coverAmount;
+   @org.kie.api.definition.type.Label("Employment duration of the customer")
    private EmploymentDurationType employmentDuration;
 
    public CustomerProfile()
