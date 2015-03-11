@@ -11,6 +11,6 @@ rule "generate-customer-profile"
 	then
 		CustomerProfile profile = new CustomerProfile();
 		profile.setCustomer( c );
-		profile.setAge( getAge( c.getDob() ) );
-		insertLogical( profile );
+		profile.setAge( getAge( g.getDob() ) );
+		insert( profile );
 end
