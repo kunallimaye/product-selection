@@ -27,6 +27,7 @@
           <header>Age</header>
           <constraintValueType>3</constraintValueType>
           <factField>age</factField>
+          <fieldType>Integer</fieldType>
           <operator>&gt;=</operator>
           <parameters/>
         </condition-column52>
