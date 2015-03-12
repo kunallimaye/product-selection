@@ -1,0 +1,5 @@
+package com.kunal.demo.rules;
+
+import com.kunal.demo.rules.model.Customer;
+import com.kunal.demo.rules.model.CustomerProfile;
+
