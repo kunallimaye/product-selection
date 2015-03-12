@@ -3,3 +3,27 @@ package com.kunal.demo.rules;
 import com.kunal.demo.rules.model.Customer;
 import com.kunal.demo.rules.model.CustomerProfile;
 
+rule "private-health-insurance_0"
+	when 
+		profile : CustomerProfile(age < 5)
+	then 
+		modify( profile ) {
+			setRequiresHealthInsurance( false )
+		}
+end
+rule "private-health-insurance_1"
+	when 
+		profile : CustomerProfile(age > 80)
+	then 
+		modify( profile ) {
+			setRequiresHealthInsurance( false )
+		}
+end
+rule "private-health-insurance_2"
+	when 
+		profile : CustomerProfile(age in  ( "5", "80" ))
+	then 
+		modify( profile ) {
+			setRequiresHealthInsurance( true )
+		}
+end
