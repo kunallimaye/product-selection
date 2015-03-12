@@ -11,7 +11,7 @@ no-loop
 		modify( profile ) {
 			setRequiresHealthInsurance( false )
 		}
-		System.out.println("Executed 5");
+		//System.out.println("Executed 5");
 end
 rule "private-health-insurance_1"
 no-loop
@@ -21,7 +21,7 @@ no-loop
 		modify( profile ) {
 			setRequiresHealthInsurance( false )
 		}
-		System.out.println("Executed 80");
+		//System.out.println("Executed 80");
 end
 rule "private-health-insurance_2"
 no-loop
@@ -31,5 +31,5 @@ no-loop
 		modify( profile ) {
 			setRequiresHealthInsurance( true )
 		}
-		System.out.println("Executed 5-80");
+		//System.out.println("Executed 5-80");
 end
