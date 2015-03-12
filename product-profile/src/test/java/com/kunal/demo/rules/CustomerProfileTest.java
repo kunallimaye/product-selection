@@ -7,6 +7,8 @@ package com.kunal.demo.rules;
 import java.util.Calendar;
 import java.util.Date;
 
+import junit.framework.Assert;
+
 import org.junit.BeforeClass;
 import org.junit.Test;
 import org.kie.api.KieServices;
@@ -44,7 +46,12 @@ public class CustomerProfileTest {
 		customer.setDob(this.setDate(1, 1, 1980));
 		customer.setName("KS Limaye");
 		
-		kSession.execute(customer);
-		//Assert.assertTrue(customer.isAdult());
+		CustomerProfile profile = new CustomerProfile(customer);
+		//profile.setCustomer(customer);
+		//profile.setAge(35);
+		kSession.execute(profile);
+		
+		System.out.println(profile);
+		Assert.assertTrue(profile.isRequiresHealthInsurance());
 	}
 }

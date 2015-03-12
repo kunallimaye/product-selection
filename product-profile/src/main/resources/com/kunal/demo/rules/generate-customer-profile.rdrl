@@ -7,10 +7,9 @@ import com.kunal.demo.rules.model.CustomerProfile;
 rule "generate-customer-profile"
 	dialect "mvel"
 	when
-		c : Customer( )
+		customerProfile : CustomerProfile( customer != null )
 	then
-		CustomerProfile profile = new CustomerProfile();
-		profile.setCustomer( c );
-		profile.setAge( getAge( c.getDob() ) );
-		insert( profile );
+		modify( customerProfile ) {
+			setAge( getAge( customerProfile.getCustomer().getDob() ) )
+			}
 end

@@ -44,6 +44,7 @@ public class CustomerAgeTest {
 		customer.setName("KS Limaye");
 		
 		kSession.execute(customer);
+		System.out.println(customer);
 		//Assert.assertTrue(customer.isAdult());
 	}
 	
