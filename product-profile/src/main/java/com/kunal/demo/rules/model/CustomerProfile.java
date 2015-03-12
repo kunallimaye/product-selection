@@ -20,6 +20,9 @@ public class CustomerProfile
    @org.kie.api.definition.type.Label("Employment duration of the customer")
    private EmploymentDurationType employmentDuration;
 
+   @org.kie.api.definition.type.Label(value = "Does the customer require health insurance?")
+   private boolean requiresHealthInsurance;
+
    public CustomerProfile()
    {
 
@@ -107,12 +110,23 @@ public class CustomerProfile
             + employmentDuration + "]";
    }
 
-   public CustomerProfile(com.kunal.demo.rules.model.Customer customer,
-         int age, long coverAmount)
+   public boolean isRequiresHealthInsurance()
+   {
+      return this.requiresHealthInsurance;
+   }
+
+   public void setRequiresHealthInsurance(boolean requiresHealthInsurance)
+   {
+      this.requiresHealthInsurance = requiresHealthInsurance;
+   }
+
+   public CustomerProfile(com.kunal.demo.rules.model.Customer customer, int age,
+         long coverAmount, boolean requiresHealthInsurance)
    {
       this.customer = customer;
       this.age = age;
       this.coverAmount = coverAmount;
+      this.requiresHealthInsurance = requiresHealthInsurance;
    }
 
 }
