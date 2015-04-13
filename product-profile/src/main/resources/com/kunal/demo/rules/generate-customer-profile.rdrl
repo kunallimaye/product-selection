@@ -9,7 +9,6 @@ rule "generate-customer-profile"
 	when
 		customerProfile : CustomerProfile( (customer != null) && (age == 0) )
 	then
-		System.out.println("Executing rule");
 		modify( customerProfile ) {
 			setAge( getAge( customerProfile.getCustomer().getDob() ) )
 			}
